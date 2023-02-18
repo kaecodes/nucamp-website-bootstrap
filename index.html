@@ -209,6 +209,14 @@
               <span class="carousel-control-next-icon"></span>
               <span class="sr-only">Next</span>
             </a>
+            <div class="btn-group" id="carouselButton">
+              <button class="btn btn-danger btn-small" id="carouselPause">
+                <i class="fa fa-pause"></i>
+              </button>
+              <button class="btn btn-danger btn-small" id="carouselPlay">
+                <i class="fa fa-play"></i>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -218,11 +226,7 @@
         </div>
         <div class="col">
           <div class="media">
-            <img
-              class="d-flex mr-3 img-thumbnail"
-              src="img/breadcrumb-trail-thumb.jpg"
-              alt="Breadcrumb Trail thumbnail"
-            />
+            <img class="d-flex mr-3 img-thumbnail" src="img/breadcrumb-trail-thumb.jpg" alt="Breadcrumb Trail thumbnail" />
             <div class="media-body align-self-center">
               <h3>Our Campsites</h3>
               <p class="d-none d-sm-block">
@@ -247,11 +251,7 @@
                 favorite for fly fishers.
               </p>
             </div>
-            <img
-              class="img-thumbnail d-flex ml-3"
-              src="img/react-lake-thumb.jpg"
-              alt="React Lake"
-            />
+            <img class="img-thumbnail d-flex ml-3" src="img/react-lake-thumb.jpg" alt="React Lake" />
           </div>
         </div>
       </div>
@@ -261,11 +261,7 @@
         </div>
         <div class="col">
           <div class="media">
-            <img
-              class="d-flex mr-3 img-thumbnail"
-              src="img/bootstrap-thumb.png"
-              alt="Bootstrap Outfitters"
-            />
+            <img class="d-flex mr-3 img-thumbnail" src="img/bootstrap-thumb.png" alt="Bootstrap Outfitters" />
             <div class="media-body align-self-center">
               <h3>Bootstrap Outfitters</h3>
               <p class="d-none d-sm-block">
@@ -322,5 +318,16 @@
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
+    <script>
+      $(function() {
+        $(".carousel").carousel( { interval: 2000 } ); 
+        $("#carouselPause").click(function() {
+          $(".carousel").carousel("pause"); 
+        })
+        $("#carouselPlay").click(function() {
+          $(".carousel").carousel("cycle"); 
+        })
+      });
+    </script>
   </body>
 </html>
